@@ -1,0 +1,26 @@
+{
+  "name": "fleet-manager---desafio-avantsoft",
+  "version": "1.0.0",
+  "description": "Projeto criado para a realização de testes manuais e automatizados.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoMarco2997/Fleet-Manager---Desafio-Avantsoft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoMarco2997/Fleet-Manager---Desafio-Avantsoft/issues"
+  },
+  "homepage": "https://github.com/JoaoMarco2997/Fleet-Manager---Desafio-Avantsoft#readme",
+  "devDependencies": {
+    "cypress": "^15.2.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.0.0"
+  }
+}
