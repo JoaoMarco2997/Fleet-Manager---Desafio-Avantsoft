@@ -26,7 +26,7 @@
 
 //-------------------------- TESTE LOGIN -------------------------------------
 
-//CT001 - Login com credenciais válidas
+//Login com credenciais válidas
 Cypress.Commands.add('loginCV', (login) => {
     cy.get('#email').type(login.Email)
     cy.get('#password').type(login.Senha, { log: false })
@@ -35,7 +35,7 @@ Cypress.Commands.add('loginCV', (login) => {
     cy.get('.container > .inline-flex').click()
 })
 
-//CT002 - Login com credenciais inválidas
+//Login com credenciais inválidas
 Cypress.Commands.add('loginCI', (email, senha) => {
     cy.get('#email').type(email)
     cy.get('#password').type(senha, { log: false })
@@ -49,45 +49,15 @@ Cypress.Commands.add('loginCI', (email, senha) => {
 // --------------------------- TESTE ALUGUEL ----------------------------------
 
 
-//CT004 - Alugar um veículo por 03 dias com cartão de crédito
+//Alugar veículo sem cupom
 Cypress.Commands.add('aluguelCC', (login) => {
     cy.get('#email').type(login.Email)
     cy.get('#password').type(login.Senha, { log: false })
     cy.get('.inline-flex').click()
 
-
-
-})
-
-//CT005 - Alugar um veículo por 03 dias com Pix
-Cypress.Commands.add('aluguelPX', (login) => {
-
-
-
-
-})
-
-
-//CT006 - Alugar um veículo por 03 dias com cartão de crédito e cupom de desconto
-Cypress.Commands.add('aluguelCCC', (login) => {
-
-
-
-
-})
-
-//CT007 - Alugar um veículo por 03 dias com Pix e cupom de desconto
-Cypress.Commands.add('aluguelPXC', (login) => {
-
-
-
-})
-
-//CT008 - Alugar um veículo por 01 dia com diária menor que 50 reias e utilizando cupom de desconto
-Cypress.Commands.add('aluguelC', (login) => {
-
-
-
+    cy.get(':nth-child(8) > .pt-0 > .justify-between > .justify-center').click()
+    cy.get('.bg-primary').click()
+    
 })
 
 
